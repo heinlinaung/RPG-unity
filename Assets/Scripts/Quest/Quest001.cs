@@ -22,12 +22,14 @@ public class Quest001 : MonoBehaviour
         {
             actionDisplay.SetActive(true);
             actionText.SetActive(true);
+            Screen.lockCursor = false;
+            Cursor.visible = true;
         }
-        if (theDistance > 3)
-        {
-            actionDisplay.SetActive(false);
-            actionText.SetActive(false);
-        }
+        //if (theDistance > 3)
+        //{
+        //    actionDisplay.SetActive(false);
+        //    actionText.SetActive(false);
+        //}
 
         if (Input.GetButtonDown("Action"))
         {
@@ -38,17 +40,6 @@ public class Quest001 : MonoBehaviour
                 uiQuest.SetActive(true);
                 noticeCam.SetActive(true);
                 thePlayer.SetActive(false);
-            }
-        }
-        if (Input.GetButtonDown("Cancel"))
-        {
-            if (theDistance <= 3)
-            {
-                actionDisplay.SetActive(true);
-                actionText.SetActive(true);
-                uiQuest.SetActive(false);
-                noticeCam.SetActive(false);
-                thePlayer.SetActive(true);
             }
         }
     }
