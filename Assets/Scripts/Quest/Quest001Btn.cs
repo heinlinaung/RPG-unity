@@ -37,7 +37,7 @@ public class Quest001Btn : MonoBehaviour
         objective02.SetActive(true);
         yield return new WaitForSeconds(0.5f);
         objective03.SetActive(true);
-        yield return new WaitForSeconds(12);
+        yield return new WaitForSeconds(7);
         activeQuestBox.SetActive(false);
         objective01.SetActive(false);
         objective02.SetActive(false);

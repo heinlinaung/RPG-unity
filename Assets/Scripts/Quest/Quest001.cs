@@ -22,8 +22,6 @@ public class Quest001 : MonoBehaviour
         {
             actionDisplay.SetActive(true);
             actionText.SetActive(true);
-            Screen.lockCursor = false;
-            Cursor.visible = true;
         }
         //if (theDistance > 3)
         //{
@@ -35,6 +33,9 @@ public class Quest001 : MonoBehaviour
         {
             if (theDistance <= 3)
             {
+                Screen.lockCursor = false;
+                //Cursor.lockState = false;
+                Cursor.visible = true;
                 actionDisplay.SetActive(false);
                 actionText.SetActive(false);
                 uiQuest.SetActive(true);
