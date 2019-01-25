@@ -12,9 +12,11 @@ public class Quest001Btn : MonoBehaviour
     public GameObject objective01;
     public GameObject objective02;
     public GameObject objective03;
+    public GameObject questExMark;
+    public GameObject questNoticeBoard;
+    public GameObject questNoticeTrigger;
 
     public void AcceptQuest() {
-        Debug.Log("AcceptQuest");
         thePlayer.SetActive(true);
         noticeCam.SetActive(false);
         uiQuest.SetActive(false);
@@ -23,7 +25,9 @@ public class Quest001Btn : MonoBehaviour
 
     IEnumerator SetQuestUI()
     {
-        Debug.Log("SetQuestUI");
+        questExMark.SetActive(false);
+        questNoticeBoard.SetActive(false);
+        questNoticeTrigger.SetActive(false);
         activeQuestBox.GetComponent<Text>().text = "First Weapon";
         objective01.GetComponent<Text>().text = "Reach the clearing in the wood";
         objective02.GetComponent<Text>().text = "Open the chest";
